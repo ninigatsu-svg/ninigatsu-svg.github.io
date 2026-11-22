@@ -1,11 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Hello World</h1>
+  <style>
+    * {
+      font-family: "Oswald", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      color: dimgrey;
+
+    }
+
+    .image-cover {
+      width: 100%;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      height: 45px;
+      color: #ffffff;
+      font-size: 14px;
+      background-color: burlywood;
+    }
+
+    .cover-box {
+      margin-top: 50px;
+      height: 350px;
+      border: 2px solid white;
+      background-image: url("./image/Cover1.jpg");
+      position: relative;
+    }
+
+    .cover-text {
+      position: absolute;
+      top: 15px;
+      color: blanchedalmond;
+
+    }
+
+    .card-box {
+      width: 350px;
+      height: 470px;
+      border: 1px solid#243B2B;
+      border-radius: 5px;
+      background-color: bisque;
+
+    }
+
+    .card-image {
+      padding: 10px 0px;
+      width: 100%;
+      height: 40%;
+      object-fit: scale-down;
+
+    }
+
+    .card-body {
+      text-align: center;
+      height: 0px;
+      color: dimgrey;  
+
+    }
+
+    .card-discription {
+      padding: 10px 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: wrap;
+      font-weight: 100px;
+      color: dimgrey;
+    
+      /* use webkit to cut text multiline */
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+
+    }
+
+    .card-button {
+      margin: auto;
+      display: block;
+      padding: 5px 20px;
+      border-radius: 10px;
+
+    }
+  </style>
+
+  <header>
+    <!-- แถบบนสุด (Top Bar) -->
+    <nav>
+      <div class="top-bar">
+        <img width="80px" ; height="80px" ; src="./image/Logo.jpg" alt="logo">
+        <h3> Tel: 081 864 6769 </h3> |
+        <h3> Email: jiangservices@gmail.com</h3>
+      </div>
+
+      <div style="float:right" display="flex" justify-content="right">
+        <a href="./index.html">Home</a> |
+        <a href="./about.html">About</a> |
+        <a href="./services.html">Service</a> |
+        <a href="./contact.html">Contact</a>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <div class="cover-box">
+
+      <div class="cover-text">
+
+        <h1 style="width: max-content;"> Jiang Birding </h1>
+        <h3 style="display: inline;"> Discover Thailand, </h3> <br>
+        <h3 style="display: inline;"> One Bird at a Time. </h3> <br>
+        <p> Explore wild place, discover remarkable birds,
+          and experience Thailand with a local birding guide.</p>
+      </div>
+
+    </div>
+    <section>
+      <div>
+        <h1>Bird of the week</h1>
+
+        <div style="display:flex;justify-content:space-between;">
+
+          <div class="card-box">
+            <img class="card-image" src="./image/Greater Painted-Snipe.jpg" alt="Greater Painted-Snipe">
+            <h3 class="card-body">Greater Painted-Snipe</h3>
+            <p class="card-discription"><b>Appearance:</b> Features a slightly drooped bill, 
+              a white eye-patch ("spectacle"), and white breast markings that curve up 
+              around the shoulder.<br> <b>Sex differences:</b> Females are larger and brighter with 
+              a maroon-chestnut head and neck and a dark breast band. 
+              Males are smaller and duller brown with buff-spotted wings.<br>
+              <b>Breeding & behavior:</b> Females are polyandrous, courting multiple males 
+              and producing owl-like hoots or booming calls. Males handle incubation 
+              (about 19 days) and chick care. 
+              Birds forage mostly at dusk and night in marshes, swamps, and wet fields.
+            </p>
+            <button class="card-button">Read more</button>
+          </div>
+
+
+          <div class="card-box">
+            <img class="card-image" src="./image/Pheasant-tailed Jacana.jpg" alt="Pheasant-tailed Jacana">
+            <h3 class="card-body">Pheasant-tailed Jacana</h3>
+            <p class="card-discription">The pheasant-tailed jacana is conspicuous and unmistakable. It is the longest species in the jacana family when the tail streamers are included. 
+              The breeding plumage is marked by the elongated central tail feathers that given the bird its name. The body is chocolate brown, the face is white, and the back of the 
+              crown is black with white stripes running down the sides of the neck, separating the white of the front of neck and the silky golden yellow of the nape. The wings are predominantly white. 
+              In flight the white wing shows a black border formed by black on the outermost primaries and the tips of the outer secondaries and the primaries.
+            </p>
+            <button class="card-button">Read more</button>
+          </div>
+
+
+          <div class="card-box">
+            <img class="card-image" src="./image/Rufous Piculet.jpg" alt="Rufous Piculet">
+            <h3 class="card-body">Rufous Piculet</h3>
+            <p class="card-discription">The rufous piculet is a very small bird with short wings and 
+              an almost non-existent tail, ranging in length from 8 to 10 cm (3 to 4 in). 
+              The upper parts are generally green tinted with bronze, and the underparts rufous, 
+              orange or cinnamon, with paler flanks. The mantle and back are olive, 
+              the wings are brownish above, and the underwings are buff. The stumpy tail is blackish above, edged with olive.
+            </p>
+            <button class="card-button">Read more</button>
+          </div>
+
+
+
+
+        </div>
+
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+
+
+
+
 </body>
+
 </html>
