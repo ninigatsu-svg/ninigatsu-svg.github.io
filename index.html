@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
 
-    <!-- Embed title (the big colored text) -->
+  <!-- Embed title (the big colored text) -->
   <meta property="og:title" content="Jiang Birding">
 
   <!-- Embed description (the text under the title) -->
@@ -36,50 +36,91 @@ One Bird at a Time.">
       font-family: "Oswald", sans-serif;
       font-optical-sizing: auto;
       font-style: normal;
-      color: dimgrey;
 
     }
 
-    .image-cover {
-      width: 100%;
+    .h1 {
+      color: #243B2B;
+
     }
 
     .top-bar {
+      background-color: #F5F3EC;
+      /* สีพื้นหลังกรอบสีน้ำตาลอ่อน */
+      padding: 5px 15px 5px 5px;
       display: flex;
-      justify-content: left;
+      /* จัดเรียงลูกทั้งหมดให้อยู่ในแนวนอน */
+      justify-content: space-between;
+      /* ดันกลุ่มซ้ายและขวาไปชิดคนละฝั่ง */
       align-items: center;
-      height: 45px;
-      color: #ffffff;
-      font-size: 14px;
-      background-color: burlywood;
+      /* จัดกึ่งกลางแนวตั้งให้เท่ากัน */
+      color: #243B2B;
+    }
+
+    .left-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      /* เว้นระยะห่างระหว่างโลโก้กับข้อความ */
+    }
+
+    .left-info img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      /* ทำโลโก้ให้เป็นวงกลม */
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #243B2B;
+      margin: 0 5px;
+      /* เว้นวรรครอบเครื่องหมาย | */
     }
 
     .cover-box {
-      margin-top: 50px;
+      margin-top: 2px;
       height: 350px;
-      border: 2px solid white;
-      background-image: url("./image/Cover1.jpg");
+      border: 0px solid rgb(250, 250, 249);
+      background-image: linear-gradient(to right, rgba(20, 28, 18, 0.75) 0%, rgba(20, 28, 18, 0.3) 55%, rgba(20, 28, 18, 0) 100%), url("./image/Cover1.jpg");
       position: relative;
+     
+    }
+
+    /* หัวข้อหลักตัวหนา */
+    .hero-title {
+      font-family: 'Georgia', 'Playfair Display', serif;
+      font-size: clamp(70px, 5vw, 52px);
+      /* ปรับขนาดอัตโนมัติตามหน้าจอ */
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0 0 30px 0;
+      letter-spacing: -0.02em;
     }
 
     .cover-text {
+      font-family: Georgia, serif;
       position: absolute;
-      top: 15px;
-      color: blanchedalmond;
-
+      top: 30px;
+      left: 100px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: normal;
+      margin: 0 0 14px 0;
+      color: #f8f6f0;
     }
 
     .card-box {
       width: 350px;
       height: 470px;
-      border: 1px solid#243B2B;
+      border: 1px solid #243B2B;
       border-radius: 5px;
-      background-color: bisque;
+      background-color: #F5F3EC;
 
     }
 
     .card-image {
-      padding: 10px 0px;
+      padding: 10px 10px 5px 0px;
       width: 100%;
       height: 40%;
       object-fit: scale-down;
@@ -88,8 +129,8 @@ One Bird at a Time.">
 
     .card-body {
       text-align: center;
-      height: 0px;
-      color: dimgrey;  
+      height: 5px;
+      color: #243B2B;
 
     }
 
@@ -99,8 +140,8 @@ One Bird at a Time.">
       text-overflow: ellipsis;
       white-space: wrap;
       font-weight: 100px;
-      color: dimgrey;
-    
+      color: #243B2B;
+
       /* use webkit to cut text multiline */
       display: -webkit-box;
       -webkit-line-clamp: 6;
@@ -113,25 +154,160 @@ One Bird at a Time.">
       display: block;
       padding: 5px 20px;
       border-radius: 10px;
+    }
 
+    .section-header {
+      color: #243B2B;
+      text-align: center;
+      max-width: 600px;
+      /*กำหนดความสูงของเส้นซ้าย-ขวา*/
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .subtitle {
+      display: flex;
+      align-items: center;
+      /*จัดเส้นให้อยู่ในแนวกึ่งกลางแนวตั้งของอักษร*/
+      justify-content: center;
+      gap: 12px;
+      /*ระยะห่างระหว่างตัวอักษรกับเส้น*/
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      margin-top: 5px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .subtitle::before,
+    .subtitle::after {
+      content: "";
+      flex: 1;
+      /*ยืดเส้นให้เต็มพื้นที่ที่เหลือทั้งสองฝั่งเท่าๆ กัน*/
+      height: 1px;
+      /*ความหนาของเส้น */
+      background-color: #243B2B;
+      /*สีของเส้น*/
+    }
+
+    .video-feature-card {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      /* แบ่งซ้าย-ขวา ให้ฝั่งวิดีโอกว้างกว่าเล็กน้อย */
+      align-items: center;
+      gap: 32px;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 28px 28px 28px 40px;
+      background-color: #2f4325;
+      /* สีพื้นหลังเขียวเข้มตามภาพ */
+      border-radius: 16px;
+      color: #ffffff;
+    }
+
+    /* --- ฝั่งซ้าย: ข้อความ --- */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #c5d1be;
+      margin-bottom: 14px;
+    }
+
+    /* เส้นขีดสั้นๆ หน้าและหลังคำว่า FROM THE FIELD */
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
+      width: 18px;
+      /* กำหนดความยาวเส้นคงที่ */
+      height: 1px;
+      background-color: #8fa385;
+    }
+
+    .card-title {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      line-height: 1.2;
+      font-weight: normal;
+      margin: 0 0 14px 0;
+      color: #f8f6f0;
+    }
+
+    .card-description {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #d8e0d3;
+      margin: 0 0 24px 0;
+    }
+
+    /* ปุ่มสีครีมทอง */
+    .btn-primary {
+      display: inline-block;
+      padding: 12px 22px;
+      background-color: #e8cfa1;
+      color: #1f2b18;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 999px;
+      /* ทำขอบมนทรงแคปซูล */
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #dec089;
+    }
+
+    /* --- ฝั่งขวา: กรอบวิดีโอ --- */
+    .card-media {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      /* สัดส่วนกรอบวิดีโอตามภาพ */
+      border-radius: 12px;
+      overflow: hidden;
+      /* ตัดมุมวิดีโอให้โค้งมนตามกรอบ */
+      background-color: #000;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-media video,
+    .card-media iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* ให้ภาพวิดีโอเต็มกรอบพอดีโดยไม่เสียสัดส่วน */
+      display: block;
+    }
+
+    /* --- ปรับให้แสดงผล 1 คอลัมน์บนหน้าจอมือถือ --- */
+    @media (max-width: 768px) {
+      .video-feature-card {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 24px;
+      }
     }
   </style>
 
-  <header>
-    <!-- แถบบนสุด (Top Bar) -->
-    <nav>
-      <div class="top-bar">
-        <img width="80px" ; height="80px" ; src="./image/Logo.jpg" alt="logo">
-        <h3> Tel: 081 864 6769 </h3> |
-        <h3> Email: jiangservices@gmail.com</h3>
-      </div>
+  <header class="top-bar">
 
-      <div style="float:right" display="flex" justify-content="right">
-        <a href="./index.html">Home</a> |
-        <a href="./about.html">About</a> |
-        <a href="./services.html">Service</a> |
-        <a href="./contact.html">Contact</a>
-      </div>
+    <div class="left-info">
+      <img src="./image/Logo.jpg" alt="logo">
+      <span> <b>Tel</b>: 081 864 6769 | <b>Email:</b> jiangservices@gmail.com </span>
+    </div>
+
+    <nav class="nav-menu">
+
+      <a href="./index.html">Home</a> |
+      <a href="./about.html">About</a> |
+      <a href="./services.html">Service</a> |
+      <a href="./contact.html">Contact</a>
+
     </nav>
 
   </header>
@@ -140,32 +316,36 @@ One Bird at a Time.">
     <div class="cover-box">
 
       <div class="cover-text">
-
-        <h1 style="width: max-content;"> Jiang Birding </h1>
+        <h1 class="hero-title"> Jiang Birding </h1>
         <h3 style="display: inline;"> Discover Thailand, </h3> <br>
         <h3 style="display: inline;"> One Bird at a Time. </h3> <br>
-        <p> Explore wild place, discover remarkable birds,
+        <p> Explore wild place, discover remarkable birds,<br>
           and experience Thailand with a local birding guide.</p>
+      </div>
+      <div class="card-button">
+
       </div>
 
     </div>
     <section>
       <div>
-        <h1>Bird of the week</h1>
+        <div class="section-header">
+          <span class="subtitle">Recent Sightings</span>
+        </div>
 
         <div style="display:flex;justify-content:space-between;">
 
           <div class="card-box">
             <img class="card-image" src="./image/Greater Painted-Snipe.jpg" alt="Greater Painted-Snipe">
             <h3 class="card-body">Greater Painted-Snipe</h3>
-            <p class="card-discription"><b>Appearance:</b> Features a slightly drooped bill, 
-              a white eye-patch ("spectacle"), and white breast markings that curve up 
-              around the shoulder.<br> <b>Sex differences:</b> Females are larger and brighter with 
-              a maroon-chestnut head and neck and a dark breast band. 
+            <p class="card-discription"><b>Appearance:</b> Features a slightly drooped bill,
+              a white eye-patch ("spectacle"), and white breast markings that curve up
+              around the shoulder.<br> <b>Sex differences:</b> Females are larger and brighter with
+              a maroon-chestnut head and neck and a dark breast band.
               Males are smaller and duller brown with buff-spotted wings.<br>
-              <b>Breeding & behavior:</b> Females are polyandrous, courting multiple males 
-              and producing owl-like hoots or booming calls. Males handle incubation 
-              (about 19 days) and chick care. 
+              <b>Breeding & behavior:</b> Females are polyandrous, courting multiple males
+              and producing owl-like hoots or booming calls. Males handle incubation
+              (about 19 days) and chick care.
               Birds forage mostly at dusk and night in marshes, swamps, and wet fields.
             </p>
             <button class="card-button">Read more</button>
@@ -175,10 +355,14 @@ One Bird at a Time.">
           <div class="card-box">
             <img class="card-image" src="./image/Pheasant-tailed Jacana.jpg" alt="Pheasant-tailed Jacana">
             <h3 class="card-body">Pheasant-tailed Jacana</h3>
-            <p class="card-discription">The pheasant-tailed jacana is conspicuous and unmistakable. It is the longest species in the jacana family when the tail streamers are included. 
-              The breeding plumage is marked by the elongated central tail feathers that given the bird its name. The body is chocolate brown, the face is white, and the back of the 
-              crown is black with white stripes running down the sides of the neck, separating the white of the front of neck and the silky golden yellow of the nape. The wings are predominantly white. 
-              In flight the white wing shows a black border formed by black on the outermost primaries and the tips of the outer secondaries and the primaries.
+            <p class="card-discription">The pheasant-tailed jacana is conspicuous and unmistakable. It is the longest
+              species in the jacana family when the tail streamers are included.
+              The breeding plumage is marked by the elongated central tail feathers that given the bird its name. The
+              body is chocolate brown, the face is white, and the back of the
+              crown is black with white stripes running down the sides of the neck, separating the white of the front of
+              neck and the silky golden yellow of the nape. The wings are predominantly white.
+              In flight the white wing shows a black border formed by black on the outermost primaries and the tips of
+              the outer secondaries and the primaries.
             </p>
             <button class="card-button">Read more</button>
           </div>
@@ -187,19 +371,64 @@ One Bird at a Time.">
           <div class="card-box">
             <img class="card-image" src="./image/Rufous Piculet.jpg" alt="Rufous Piculet">
             <h3 class="card-body">Rufous Piculet</h3>
-            <p class="card-discription">The rufous piculet is a very small bird with short wings and 
-              an almost non-existent tail, ranging in length from 8 to 10 cm (3 to 4 in). 
-              The upper parts are generally green tinted with bronze, and the underparts rufous, 
-              orange or cinnamon, with paler flanks. The mantle and back are olive, 
-              the wings are brownish above, and the underwings are buff. The stumpy tail is blackish above, edged with olive.
+            <p class="card-discription">The rufous piculet is a very small bird with short wings and
+              an almost non-existent tail, ranging in length from 8 to 10 cm (3 to 4 in).
+              The upper parts are generally green tinted with bronze, and the underparts rufous,
+              orange or cinnamon, with paler flanks. The mantle and back are olive,
+              the wings are brownish above, and the underwings are buff. The stumpy tail is blackish above, edged with
+              olive.
             </p>
             <button class="card-button">Read more</button>
           </div>
 
-
-
+          <div class="card-box">
+            <img class="card-image" src="./image/grey-chested jungle flycatcher.jpg" alt="Grey-chested">
+            <h3 class="card-body">Grey-chested Jungle Flycatcher</h3>
+            <p class="card-discription"><b>Appearance:</b> About 15 cm long (14–21 g) with dark olive-brown upperparts,
+              a white throat, a brownish-grey breastband, a dark broadly-based bill, large dark eyes,
+              and pink or pinkish-grey legs. <b>Behavior & Diet:</b> Usually seen alone or in pairs foraging
+              for small invertebrates in the undergrowth and lower-to-middle canopy.
+              Frequently bobs and spreads its tail and utters short, high, thin song notes
+            </p>
+            <button class="card-button">Read more</button>
+          </div>
 
         </div>
+    </section>
+    <section>
+      <div class="section-header">
+        <span class="subtitle">Bird of the week</span>
+      </div>
+
+      <section class="video-feature-card">
+        <!-- คอลัมน์ซ้าย: ข้อความและปุ่ม -->
+        <div class="card-content">
+          <span class="eyebrow">FROM THE FIELD</span>
+          <h2 class="card-title">The Best Moments Can't Always Be Planned.</h2>
+          <p class="card-description">Watch our latest birding video from the Thai forests.</p>
+          <a href="./video/C0092.MP4" class="btn-primary">Watch More Videos &rarr;</a>
+        </div>
+
+        <!-- คอลัมน์ขวา: วิดีโอ -->
+        <div class="card-media">
+          <!-- กรณีใช้ไฟล์วิดีโอในเครื่อง (.mp4) -->
+          <video controls poster="thumbnail-bird.jpg">
+            <source src="./video/C0092.MP4" type="video/mp4">
+            เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+          </video>
+
+          <!-- หมายเหตุ: หากฝังจาก YouTube ให้สลับไปใช้โค้ด iframe ด้านล่างนี้แทนแท็ก <video> -->
+          <!-- 
+    <iframe 
+      src="https://youtube.comัสวิดีโอ" 
+      title="Birding video"
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe> 
+    -->
+        </div>
+      </section>
 
     </section>
   </main>
