@@ -55,6 +55,7 @@ One Bird at a Time.">
       align-items: center;
       /* จัดกึ่งกลางแนวตั้งให้เท่ากัน */
       color: #243B2B;
+      
     }
 
     .left-info {
@@ -124,6 +125,7 @@ One Bird at a Time.">
       width: 100%;
       height: 40%;
       object-fit: scale-down;
+     
 
     }
 
@@ -204,6 +206,7 @@ One Bird at a Time.">
       /* สีพื้นหลังเขียวเข้มตามภาพ */
       border-radius: 16px;
       color: #ffffff;
+
     }
 
     /* --- ฝั่งซ้าย: ข้อความ --- */
@@ -292,6 +295,206 @@ One Bird at a Time.">
         gap: 24px;
       }
     }
+.site-footer {
+  position: relative;
+  background-color:  #F5F3EC; 
+  color: #243B2B;
+  font-family: sans-serif;
+  overflow: hidden; /* ซ่อนส่วนเกินของรูปใบไม้ด้านขวา */
+}
+
+/* ลายใบไม้โปร่งแสงด้านขวา*/ 
+.footer-bg-leaf {
+  position: absolute;
+  right: 2%;
+  top: -2px;
+  height: 100%;
+  opacity: 0.1; /* ปรับความจางให้กลมกลืน */
+  pointer-events: none; /* ไม่ให้บังการคลิกลิงก์ */
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+ 
+}
+
+/* --- ส่วนบน: จัด Layout 3 ส่วน --- */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr 1.2fr;
+  align-items: center;
+  padding: 25px 0;
+}
+
+/* 1. โลโก้ */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon {
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 18px;
+  letter-spacing: 0.25em;
+  color: #243B2B;
+}
+
+.brand-subtitle {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color:#243B2B;
+  margin-top: 2px;
+}
+
+.brand-tagline {
+  font-size: 10px;
+  color:#243B2B;
+  margin-top: 6px;
+}
+
+/* 2. กลุ่มลิงก์ตรงกลาง + เส้นคั่นแนวตั้ง */
+.footer-links-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 0 48px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color:#243B2B;
+  margin: 0 0 12px 0;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  color:#243B2B;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: #243B2B;;
+}
+
+/* 3. สโลแกนด้านขวา */
+.footer-quote {
+  padding-left: 40px;
+}
+
+.footer-quote p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.4;
+  color:#243B2B;;
+  margin: 0;
+}
+
+/* --- ส่วนล่าง: แถบลิขสิทธิ์ --- */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 80px 10px 20; /* เว้นระยะขวาเผื่อปุ่ม WhatsApp */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 11px;
+  color: #243B2B;;
+}
+
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legal-links a {
+  color:#243B2B;;
+  text-decoration: none;
+}
+
+.legal-links a:hover {
+  color: #243B2B;;
+}
+
+/* --- ปุ่มลอย WhatsApp มุมขวาล่าง --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 54px;
+  height: 54px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+/* --- Responsive สำหรับมือถือ/แท็บเล็ต --- */
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 36px 0;
+  }
+
+  .footer-links-group {
+    padding: 24px 0;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .footer-quote {
+    padding-left: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+    padding-right: 0;
+  }
+}
+
   </style>
 
   <header class="top-bar">
@@ -416,6 +619,7 @@ One Bird at a Time.">
             <source src="./video/C0092.MP4" type="video/mp4">
             เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
           </video>
+        
 
           <!-- หมายเหตุ: หากฝังจาก YouTube ให้สลับไปใช้โค้ด iframe ด้านล่างนี้แทนแท็ก <video> -->
           <!-- 
@@ -429,13 +633,83 @@ One Bird at a Time.">
     -->
         </div>
       </section>
+            <div class="section-header">
+        <span class="subtitle">Bird of the week</span>
+      </div>
+      <section>
+
+      </section>
 
     </section>
   </main>
 
-  <footer>
+<footer class="site-footer">
+  <!-- ภาพลายเส้นใบไม้จางๆ ด้านขวา (ใส่เป็น background หรือ img) -->
+  <img src="./image/left.png" alt="footer-bg-leaf" class="footer-bg-leaf" aria-hidden="true">
 
-  </footer>
+  <div class="footer-container">
+    <!-- ส่วนบน: แบ่ง 3 โซนหลัก -->
+    <div class="footer-top">
+      <!-- โซนที่ 1: โลโก้ -->
+      <div class="footer-brand">
+        <div class="logo-wrapper">
+          <!-- แทนที่ด้วยไฟล์โลโก้จริงของคุณ -->
+          <img src="./image/Logo.jpg" alt="Jiang Birding Logo" class="brand-icon">
+          <div class="brand-text">
+            <span class="brand-title">J I A N G</span>
+            <span class="brand-subtitle">B I R D I N G</span>
+            <span class="brand-tagline">Birding · Nature · Discovery</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- โซนที่ 2: ลิงก์เมนู (คั่นด้วยเส้นแนวตั้งซ้าย-ขวา) -->
+      <div class="footer-links-group">
+        <div class="footer-col">
+          <h3 class="footer-heading">Explore</h3>
+          <ul>
+            <li><a href="#birds">Birds of Thailand</a></li>
+            <li><a href="#trips">Birding Trips</a></li>
+            <li><a href="#videos">Videos &amp; Stories</a></li>
+            <li><a href="#shop">Shop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Get in Touch</h3>
+          <ul>
+            <li><a href="https://wa.me">WhatsApp</a></li>
+            <li><a href="mailto:info@jingbirding.com">Email</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61569432947729&locale=th_TH">Facebook</a></li>
+            <li><a href="#thailand">Thailand</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- โซนที่ 3: สโลแกนฝั่งขวา -->
+      <div class="footer-quote">
+        <p>Discover Thailand,<br>One Bird at a Time.</p>
+      </div>
+    </div>
+
+    <!-- ส่วนล่าง: ลิขสิทธิ์และนโยบาย -->
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2026 Jiang Birding. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="#privacy">Privacy Policy</a>
+        <span class="divider">|</span>
+        <a href="#terms">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ปุ่มลอย WhatsApp มุมขวาล่าง -->
+  <a href="https://wa.me" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="#ffffff">
+      <path d="M16.05 2.01c-7.72 0-14 6.28-14 14 0 2.47.65 4.88 1.88 7.01L2 30l7.18-1.88a13.93 13.93 0 0 0 6.87 1.8h.01c7.72 0 14-6.28 14-14 0-3.74-1.46-7.26-4.1-9.9a13.91 13.91 0 0 0-9.91-4.01zm0 25.54h-.01a11.6 11.6 0 0 1-5.91-1.62l-.42-.25-4.39 1.15 1.17-4.28-.28-.44a11.58 11.58 0 0 1-1.78-6.19c0-6.41 5.22-11.63 11.64-11.63 3.11 0 6.03 1.21 8.23 3.41a11.56 11.56 0 0 1 3.4 8.23c0 6.41-5.22 11.62-11.65 11.62zm6.38-8.71c-.35-.18-2.07-1.02-2.39-1.14-.32-.12-.55-.18-.79.18-.23.35-.9 1.14-1.11 1.37-.2.23-.41.26-.76.09-.35-.18-1.48-.55-2.82-1.74-1.04-.93-1.75-2.08-1.95-2.43-.2-.35-.02-.54.15-.71.16-.16.35-.41.52-.61.18-.2.23-.35.35-.58.12-.23.06-.44-.03-.61-.09-.18-.79-1.9-1.08-2.6-.28-.68-.57-.59-.79-.6h-.67c-.23 0-.61.09-.93.44-.32.35-1.22 1.19-1.22 2.91s1.25 3.38 1.43 3.61c.18.23 2.46 3.76 5.96 5.27.83.36 1.48.57 1.99.73.84.27 1.6.23 2.2.14.67-.1 2.07-.85 2.36-1.66.29-.82.29-1.52.2-1.66-.08-.15-.31-.24-.66-.41z"/>
+    </svg>
+  </a>
+</footer>
 
 
 
